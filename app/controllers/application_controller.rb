@@ -22,11 +22,11 @@ class ApplicationController < ActionController::Base
     @current_user = nil
   end
 
-  def require_log_in
-    unless current_user
-      break
-      #render login page
-    end
-  end
+  # def require_log_in
+  #   unless current_user
+  #     break
+  #     #render login page
+  #   end
+  # end
 
 end
