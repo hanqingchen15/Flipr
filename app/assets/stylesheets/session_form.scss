@@ -1,0 +1,73 @@
+.sessionform {
+  background:rgba(255,255,255, 0.9s);
+  // border: 2px solid black;
+  padding: 10px;
+  width: 350px;
+  height: auto;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
+.login-box {
+  text-align: center;
+  font-size: 16px;
+  padding: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.errors {
+  color: red;
+}
+
+.sessionform input {
+  width: 100%;
+  font-size: 18px;
+  background-color: #E3E3E3;
+  border: none;
+  text-align: center;
+  padding-bottom: 6px;
+  padding-top: 6px;
+}
+
+.login-box label {
+  font-size: 18px;
+  display: block;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.login-message {
+  font-size: 20px;
+  padding: 5px;
+  margin: 20px;
+}
+
+.login-box button {
+  cursor: pointer;
+  margin: 7px;
+  width: 55%;
+  font-size: 20px;
+  color: black;
+  background-color: #D3D3D3;
+  border-radius: 35px;
+  padding: 5px;
+}
+
+.login-box button:hover {
+  background-color: #E9E9E9;
+}
+
+.login-box .logo {
+  padding: 5px;
+  margin: 5px;
+}
+
+.login-box .logo a {
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+}

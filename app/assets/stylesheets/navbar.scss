@@ -1,28 +1,76 @@
 .navbar {
+  list-style-type: none;
   background-color: #333;
   overflow: hidden;
   color: white;
+  opacity: 0.8;
+  justify-content: space-between;
+  display: flex;
+  padding: 15px;
+  padding-right: 20px;
+  height: 34px;
 }
 
 .login-signup {
   color: white;
   text-align: center;
-  padding: 15px;
-  font-size: 25px;
+  // padding: 15px;
+  font-size: 16px;
   display: flex;
   flex-direction: row;
 }
 
 .login-signup li {
-  list-style-type: none;
-  margin-left: auto;
+
+  margin: auto;
+
 }
 
-.login-signup li:hover {
-  background-color: #ddd;
+.navbar a {
+
+  text-decoration: none;
+}
+
+.loginlink {
+  padding-right: 22px;
+}
+
+.loginlink a:visited {
+  color: white;
+}
+
+.logo {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 30px;
+  color: white;
+  text-decoration: none;
+}
+
+.logo a:visited {
+  color: white;
+}
+
+.signupbutton {
+
+background-color: white;
+box-sizing: border-box;
+display: inline-block;
+padding: 8px 18px;
+vertical-align: top;
+font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
+font-weight: 600;
+font-size: 16px;
+text-align: center;
+border-radius: 3px;
+border: none;
+cursor: pointer;
+color: black;
+}
+
+.signupbutton a:visited {
   color: black;
 }
 
-a:visited {
-  color: white;
+.shift {
+  padding-right: 5px;
 }

@@ -8,7 +8,6 @@ import { AuthRoute } from '../util/route_util';
 const App = () => (
   <div>
     <header>
-      <h1>Flipr</h1>
       <NavbarContainer />
     </header>
     <AuthRoute path="/login" component={LoginFormContainer} />

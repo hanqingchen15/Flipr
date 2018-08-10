@@ -1,5 +1,5 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
 class SessionForm extends React.Component {
   constructor(props) {
@@ -46,11 +46,12 @@ class SessionForm extends React.Component {
 
   render() {
     return ( (this.props.formType === 'login') ? (
-      <div className="1">
+      <div className="sessionform">
         <div className="login-box">
+          <div className="logo"><Link to="/">flipr</Link></div>
           <form onSubmit={this.handleSubmit}>
-            {this.renderErrors()}
-            <p className="login-message">Please Login to Continue!</p>
+            <p className="errors">{this.renderErrors()}</p>
+            <h3 className="login-message">Welcome Back, Please Login!</h3>
             <label>Email:
               <input type="text" value={this.state.email} onChange={this.update('email')} />
             </label>
@@ -60,15 +61,17 @@ class SessionForm extends React.Component {
             <button type="submit">Log In!</button>
             <button onClick={this.handleDemo}>Demo</button>
           </form>
-
+          <p className="alreadyhas">Need an account?</p>
+          <Link to="/signup">Click Here!</Link>
         </div>
       </div>
     ) : (
-      <div className="1">
+      <div className="sessionform">
         <div className="login-box">
+          <div className="logo"><Link to="/">flipr</Link></div>
           <form onSubmit={this.handleSubmit}>
-            {this.renderErrors()}
-            <p className="login-message">Sign Up Here!</p>
+            <p className="errors">{this.renderErrors()}</p>
+            <h3 className="login-message">Sign Up Here!</h3>
             <label>Email:
               <input type="text" value={this.state.email} onChange={this.update('email')} />
             </label>
@@ -84,7 +87,8 @@ class SessionForm extends React.Component {
             <button type="submit">Create Account</button>
             <button onClick={this.handleDemo}>Demo</button>
           </form>
-
+          <p className="alreadyhas">Already have an account?</p>
+          <Link to="/login">Login here!</Link>
         </div>
       </div>
     )
