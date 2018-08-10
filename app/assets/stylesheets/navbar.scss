@@ -3,12 +3,12 @@
   background-color: #333;
   overflow: hidden;
   color: white;
-  opacity: 0.8;
+  opacity: 0.9;
   justify-content: space-between;
   display: flex;
   padding: 15px;
   padding-right: 20px;
-  height: 34px;
+  height: 32px;
 }
 
 .login-signup {
@@ -57,7 +57,7 @@ box-sizing: border-box;
 display: inline-block;
 padding: 8px 18px;
 vertical-align: top;
-font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
+font-family: inherit;
 font-weight: 600;
 font-size: 16px;
 text-align: center;
@@ -73,4 +73,46 @@ color: black;
 
 .shift {
   padding-right: 5px;
+}
+
+.loggedin .dropbtn {
+    font-size: 18px;
+    padding: 10px;
+    padding-top: 20px;
+    // padding-bottom: 20px;
+    // padding-left: 20px;
+    // padding-right: 20px;
+    margin: auto;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: inherit;
+    font-family: inherit;
+}
+
+.dropbtn:hover {
+  background-color: gray;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: black;
+    min-width: 100px;
+    // box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    display: block;
+    text-align: right;
+    cursor: pointer;
+}
+
+.loggedin:hover .dropdown-content {
+    display: block;
 }

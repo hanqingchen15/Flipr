@@ -15,8 +15,10 @@ const Navbar = ({currentUser, logout}) => {
     <nav className="navbar">
       <div className="logo"><Link to="/">flipr</Link></div>
       <div className="loggedin">
-        <li>Hi, {currentUser.fname}</li>
-        <li><a onClick={logout}>Logout</a></li>
+        <button class="dropbtn">Hello, {currentUser.fname}!</button>
+        <div class="dropdown-content">
+          <li><a onClick={logout}>Logout</a></li>
+        </div>
       </div>
     </nav>
   )

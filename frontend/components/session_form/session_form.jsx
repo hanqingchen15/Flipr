@@ -51,7 +51,7 @@ class SessionForm extends React.Component {
           <div className="logo"><Link to="/">flipr</Link></div>
           <form onSubmit={this.handleSubmit}>
             <p className="errors">{this.renderErrors()}</p>
-            <h3 className="login-message">Welcome Back, Please Login!</h3>
+            <h3 className="login-message">Welcome Back!</h3>
             <label>Email:
               <input type="text" value={this.state.email} onChange={this.update('email')} />
             </label>
