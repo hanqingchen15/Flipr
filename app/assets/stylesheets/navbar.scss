@@ -76,18 +76,19 @@ color: black;
 }
 
 .loggedin .dropbtn {
-    font-size: 18px;
-    padding: 10px;
-    padding-top: 20px;
-    // padding-bottom: 20px;
-    // padding-left: 20px;
-    // padding-right: 20px;
-    margin: auto;
-    border: none;
-    outline: none;
-    color: white;
-    background-color: inherit;
-    font-family: inherit;
+  display: flex;
+  font-size: 18px;
+  // padding: 10px;
+  padding-top: 20px;
+  // padding-bottom: 20px;
+  // padding-left: 20px;
+  // padding-right: 20px;
+  margin: auto;
+  border: none;
+  outline: none;
+  color: white;
+  background-color: inherit;
+  font-family: inherit;
 }
 
 .dropbtn:hover {
@@ -95,7 +96,8 @@ color: black;
 }
 
 .dropdown-content {
-    display: none;
+    // display: none;
+    top: 62px;
     position: absolute;
     background-color: black;
     min-width: 100px;
@@ -109,7 +111,7 @@ color: black;
     padding: 12px 20px;
     text-decoration: none;
     display: block;
-    text-align: right;
+    text-align: center;
     cursor: pointer;
 }
 
