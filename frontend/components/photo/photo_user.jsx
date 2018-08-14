@@ -3,21 +3,22 @@ import { Route } from 'react-router-dom';
 
 import PhotoIndexItem from './photo_index_item';
 
-class PhotoIndex extends React.Component {
+class PhotoUser extends React.Component {
 
   constructor(props) {
     super(props);
   }
 
   componentDidMount() {
-    this.props.requestAllPhotos();
+    this.props.requestUserPhotos(this.props.currentUser.id);
+
   }
 
   render() {
     const {photos} = this.props;
     return (
-      <div className="explorepage">
-        <h1 className="banner">Explore</h1>
+      <div className="myphotos">
+        <h1 className="banner">My Photos</h1>
         <ul>
           {photos.map( (photo, idx) => <PhotoIndexItem key={idx} photo={photo} />)}
         </ul>
@@ -26,4 +27,4 @@ class PhotoIndex extends React.Component {
   }
 }
 
-export default PhotoIndex;
+export default PhotoUser;

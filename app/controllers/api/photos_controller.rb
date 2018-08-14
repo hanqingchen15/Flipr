@@ -14,7 +14,7 @@ class Api::PhotosController < ApplicationController
     if @photo.nil? == false && @photo.update_attributes(photo_params)
       render 'api/photos/show'
     else
-      render ['cannot find/update the photo'], status: 422
+      render json: ['cannot find/update the photo'], status: 422
     end
   end
 
@@ -24,11 +24,12 @@ class Api::PhotosController < ApplicationController
       @photo.destroy
       render 'api/photos/show'
     else
-      render ['cannot delete this photo'], status: 422
+      render json: ['cannot delete this photo'], status: 422
     end
   end
 
   def index
+    puts(params)
     if params[:owner_id]
       @photos = Photo.where(owner_id: params[:owner_id]).includes(:owner)
     else
@@ -43,13 +44,13 @@ class Api::PhotosController < ApplicationController
     if @photo
       render 'api/photos/show'
     else
-      render json ['No photos found'], status: 404
+      render json: ['No photos found'], status: 404
     end
   end
 
 
 
   def photo_params
-    params.require(:photo).permit(:name, :description, :image_url)
+    params.require(:photo).permit(:name, :description, :image_url, :owner_id)
   end
 end

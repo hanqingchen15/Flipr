@@ -13,10 +13,12 @@ const Navbar = ({currentUser, logout}) => {
   );
   const loggedinLinks = () => (
     <nav className="navbar">
-      <div className="logo"><Link to="/">flipr</Link></div>
+      <div className="logo"><Link to="/explore">flipr</Link></div>
+      <div className="explorelink"><Link to="/explore">Explore</Link></div>
+      <div className="explorelink"><Link to="/myphotos">My Photos</Link></div>
       <div className="loggedin">
-        <button class="dropbtn">Hello, {currentUser.fname}!</button>
-        <div class="dropdown-content">
+        <button className="dropbtn">Hello, {currentUser.fname}!</button>
+        <div className="dropdown-content">
           <li><a onClick={logout}>Logout</a></li>
         </div>
       </div>

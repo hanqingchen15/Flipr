@@ -37,7 +37,7 @@ ActiveRecord::Schema.define(version: 2018_08_13_234241) do
   end
 
   create_table "photos", force: :cascade do |t|
-    t.string "image_url", null: false
+    t.string "image_url"
     t.integer "owner_id", null: false
     t.string "name", null: false
     t.string "description"

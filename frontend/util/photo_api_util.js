@@ -12,13 +12,13 @@ export const fetchPhoto = (id) => (
   })
 );
 
-export const fetchUserPhotos = (owner_id) => (
+export const fetchUserPhotos = (ownerId) => (
   $.ajax({
     method: "GET",
     url: `api/photos`,
-    data: { owner_id }
+    data: { owner_id: ownerId }
   })
-)
+);
 
 export const createPhoto = (photo) => (
   $.ajax({
@@ -41,4 +41,4 @@ export const deletePhoto = (photoId) => (
     method: "DELETE",
     url: `api/photos/${photoId}`
   })
-)
+);
