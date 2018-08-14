@@ -12,7 +12,7 @@ export const fetchPhoto = (id) => (
   })
 );
 
-export const fetchUserPhoto = (owner_id) => (
+export const fetchUserPhotos = (owner_id) => (
   $.ajax({
     method: "GET",
     url: `api/photos`,
