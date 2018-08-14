@@ -7,6 +7,10 @@ class User < ApplicationRecord
   attr_reader :password
 
   #has many associations
+  has_many :photos,
+  primary_key: :id,
+  foreign_key: :owner_id,
+  class_name: :Photo
 
 
   after_initialize :ensure_session_token
