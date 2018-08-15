@@ -16,6 +16,7 @@ const Navbar = ({currentUser, logout}) => {
       <div className="logo"><Link to="/explore">flipr</Link></div>
       <div className="explorelink"><Link to="/explore">Explore</Link></div>
       <div className="explorelink"><Link to="/myphotos">My Photos</Link></div>
+      <div className="explorelink"><Link to="/create">Upload Photo</Link></div>
       <div className="loggedin">
         <button className="dropbtn">Hello, {currentUser.fname}!</button>
         <div className="dropdown-content">
