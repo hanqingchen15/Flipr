@@ -5,8 +5,7 @@ class PhotoForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: "",
-      description: "",
+      photo: this.props.photo,
       photoFile: null,
       photoUrl: null
     }
@@ -48,24 +47,43 @@ class PhotoForm extends React.Component {
   }
 
   render() {
-    return (
-      <div className='photouploaddiv'>
-        <h1 className='banner'>Upload Photo</h1>
-        <form onSubmit={this.handleSubmit}>
-          <label>Name:
-            <input type='text' value={this.state.name} onChange={this.update('name')} />
-          </label>
-          <label>Description:
-            <input type='textarea' value={this.state.description} onChange={this.update('description')} />
-          </label>
-          <label>Upload Photo:
-            <input type='file' onChange={this.handleFile} />
-          </label>
-          <button type="submit">Create Photo</button>
-        </form>
-      </div>
+    console.log(this.props.formType)
+    return ( (this.props.formType === 'create') ? (
+
+        <div className='photouploaddiv'>
+          <h1 className='banner'>Upload Photo</h1>
+          <form onSubmit={this.handleSubmit}>
+            <label>Name:
+              <input type='text' onChange={this.update('name')} />
+            </label>
+            <label>Description:
+              <input type='textarea' onChange={this.update('description')} />
+            </label>
+            <label>Upload Photo:
+              <input type='file' onChange={this.handleFile} />
+            </label>
+            <button type="submit">Create Photo</button>
+          </form>
+        </div>
+      ) : (
+        <div className='photouploaddiv'>
+          <h1 className='banner'>Update Photo</h1>
+          <form onSubmit={this.handleSubmit}>
+            <label>Name:
+              <input type='text' value={this.props.photo.name} onChange={this.update('name')} />
+            </label>
+            <label>Description:
+              <input type='textarea' value={this.props.photo.description} onChange={this.update('description')} />
+            </label>
+            <label>Upload Photo:
+              <input type='file' onChange={this.handleFile} />
+            </label>
+            <button type="submit">Update Photo</button>
+          </form>
+        </div>
+      )
     );
   }
 }
 
-export default PhotoForm;
+export default withRouter(PhotoForm);

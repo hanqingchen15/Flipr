@@ -1,15 +1,14 @@
 .navbar {
   list-style-type: none;
-  background-color: black;
   overflow: hidden;
   color: white;
-  opacity: 0.7;
   justify-content: space-between;
   display: flex;
   padding: 15px;
   padding-right: 20px;
   height: 32px;
   z-index: 2;
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .navbar-loggedin {
@@ -81,6 +80,7 @@
   font-size: 30px;
   color: white;
   text-decoration: none;
+  opacity: 1;
 }
 
 .logo a:visited {
@@ -101,6 +101,7 @@
   border: none;
   cursor: pointer;
   color: black;
+  opacity: 1;
 }
 
 .signupbutton a:visited {

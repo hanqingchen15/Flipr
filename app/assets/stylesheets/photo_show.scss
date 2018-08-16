@@ -1,16 +1,17 @@
 .picContainer img {
-  height: 550px;
+  height: 65vh;
   width: auto;
-  padding: 20px 0 10px 0;
+  // padding: 20px 0 10px 0;
   display: block;
   margin-left: auto;
   margin-right: auto;
+  padding-bottom: 10px;
 }
 
 .picContainer {
   background-color: #242424;
   align-items: center;
-  height: 600px;
+  max-height: 70vh;
 }
 
 .backtoexplore {
@@ -33,12 +34,13 @@
   display: flex;
   width: 80vw;
   margin: 0 auto;
+  justify-content: space-between;
 }
 
 .infobox {
   width: 40vw;
   padding-top: 15px;
-  // margin: 0 auto;
+
 }
 
 .photoName {
@@ -58,12 +60,12 @@
 }
 
 .photoDelete {
-  margin-left: 40px;
   margin-top: 40px;
+  height: 32px;
   background-color: grey;
   box-sizing: border-box;
   display: inline-block;
-  padding: 8px 18px;
+  padding: 8px 16px;
   vertical-align: top;
   font-family: inherit;
   font-weight: 600;
@@ -77,4 +79,37 @@
 
 .photoDelete:hover {
   background-color: darkgrey;
+}
+
+.photoEdit {
+  margin-top: 40px;
+  margin-right: 20px;
+  max-height: 32px;
+  background-color: grey;
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 8px 16px;
+  vertical-align: top;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 16px;
+  text-align: center;
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+
+.photoEdit:hover {
+  background-color: darkgrey;
+}
+
+.editing {
+  display: flex;
+  // flex-direction: row-reverse;
+  width: 35vw;
+  // justify-content: space-between;
+  // border: 3px solid black;
+  // overflow: hidden;
+  white-space: nowrap;
 }

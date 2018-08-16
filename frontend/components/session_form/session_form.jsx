@@ -20,6 +20,18 @@ class SessionForm extends React.Component {
     });
   }
 
+  componentWillUnmount() {
+    let removeBackground = $(".background");
+    removeBackground.removeClass("background");
+    removeBackground.addClass("backgroundHidden");
+  }
+
+  componentDidMount() {
+    let addBackground = $(".backgroundHidden");
+    addBackground.removeClass("backgroundHidden");
+    addBackground.addClass("background");
+  }
+
   handleSubmit(e) {
     e.preventDefault();
     const user = Object.assign({}, this.state);
@@ -50,12 +62,12 @@ class SessionForm extends React.Component {
 
   render() {
     return ( (this.props.formType === 'login') ? (
-      <body className="background">
+      <div>
       <div className="sessionform">
         <div className="login-box">
           <div className="logo"><Link to="/">flipr</Link></div>
           <form onSubmit={this.handleSubmit}>
-            <p className="errors">{this.renderErrors()}</p>
+            <li className="errors">{this.renderErrors()}</li>
             <h3 className="login-message">Welcome Back!</h3>
             <label>Email:
               <input type="text" value={this.state.email} onChange={this.update('email')} />
@@ -66,18 +78,18 @@ class SessionForm extends React.Component {
             <button type="submit">Log In!</button>
             <button onClick={this.handleDemo}>Demo</button>
           </form>
-          <p className="alreadyhas">Need an account?</p>
+          <li className="alreadyhas">Need an account?</li>
           <Link to="/signup">Click Here!</Link>
         </div>
       </div>
-      </body>
+    </div>
     ) : (
-      <body className="background">
+      <div>
       <div className="sessionform">
         <div className="login-box">
           <div className="logo"><Link to="/">flipr</Link></div>
           <form onSubmit={this.handleSubmit}>
-            <p className="errors">{this.renderErrors()}</p>
+            <li className="errors">{this.renderErrors()}</li>
             <h3 className="login-message">Sign Up Here!</h3>
             <label>Email:
               <input type="text" value={this.state.email} onChange={this.update('email')} />
@@ -94,11 +106,11 @@ class SessionForm extends React.Component {
             <button type="submit">Create Account</button>
             <button onClick={this.handleDemo}>Demo</button>
           </form>
-          <p className="alreadyhas">Already have an account?</p>
+          <li className="alreadyhas">Already have an account?</li>
           <Link to="/login">Login here!</Link>
         </div>
       </div>
-      </body>
+    </div>
     )
   );
   }

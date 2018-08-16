@@ -4,13 +4,12 @@ import { updatePhoto } from '../../actions/photo_actions';
 import PhotoForm from './photo_form';
 
 const msp = (state, ownProps) => {
-  const photo = {
-    name: "",
-    description: "",
-    formType: 'update'
-  };
+  let photoId = ownProps.match.params.photoId;
+  let photo = state.entities.photos[photoId] || {};
   return {
     photo,
+    photoId,
+    formType: 'update',
     errors: state.errors.photos
   };
 }

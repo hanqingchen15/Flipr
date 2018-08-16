@@ -33,22 +33,22 @@
 }
 
 .phototext {
-  display: flex;
-  position: relative;
-  bottom: 50px;
-  left: 10px;
-  color: #fff;
+  // display: flex;
+  // position: relative;
+  // bottom: 50px;
+  // left: 10px;
+  // color: #fff;
   visibility: hidden;
-  text-align: left;
-  flex-direction: column;
-  border: 3px solid white;
-  height: auto;
+  // text-align: left;
+  // flex-direction: column;
+  // border: 3px solid white;
+  // height: auto;
 }
 
-.photo-index-item:hover .phototext {
-  visibility: visible;
-
-}
+// .photo-index-item:hover .phototext {
+//   visibility: visible;
+//
+// }
 
 .photoColumn {
   column-width: 300px;

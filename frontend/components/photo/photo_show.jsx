@@ -6,11 +6,12 @@ class PhotoShow extends React.Component {
     super(props);
     this.state = {
       photo: this.props.photo,
-      modalOpen: false
     }
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleDelete = this.handleDelete.bind(this);
     this.deleteButton = this.deleteButton.bind(this);
+    this.handleEdit = this.handleEdit.bind(this);
+    this.editButton = this.editButton.bind(this);
 
     // this.openModal = this.openModal.bind(this);
     // this.closeModal = this.closeModal.bind(this);
@@ -42,6 +43,11 @@ class PhotoShow extends React.Component {
     this.props.editPhoto(this.state.photo);
   }
 
+  handleEdit(e) {
+    e.preventDefault();
+    this.props.history.push(`/photos/${this.props.photo.id}/edit`);
+  }
+
   handleDelete(e) {
     e.preventDefault();
     this.props.destroyPhoto(this.props.photo.id).then(
@@ -57,9 +63,18 @@ class PhotoShow extends React.Component {
 
   deleteButton() {
     if (this.props.currentUser.id === this.props.photo.owner_id) {
-      console.log('returned path');
       return (
         <a className="photoDelete" onClick={this.handleDelete}>Delete Photo</a>
+      );
+    } else {
+      return null;
+    }
+  }
+
+  editButton() {
+    if (this.props.currentUser.id === this.props.photo.owner_id) {
+      return (
+        <a className="photoEdit" onClick={this.handleEdit}>Update Photo</a>
       );
     } else {
       return null;
@@ -84,7 +99,9 @@ class PhotoShow extends React.Component {
             <p className="photoDescription">{`${photo.description}`}</p>
           </div>
           <div className="editing">
+            {this.editButton()}
             {this.deleteButton()}
+
           </div>
         </div>
 
