@@ -1,14 +1,49 @@
 .navbar {
   list-style-type: none;
-  background-color: #333;
+  background-color: black;
   overflow: hidden;
   color: white;
-  opacity: 0.9;
+  opacity: 0.7;
   justify-content: space-between;
   display: flex;
   padding: 15px;
   padding-right: 20px;
   height: 32px;
+  z-index: 2;
+}
+
+.navbar-loggedin {
+  list-style-type: none;
+  background-color: black;
+  overflow: hidden;
+  color: white;
+  justify-content: space-between;
+  display: flex;
+  padding-right: 20px;
+}
+
+.navbar-left {
+  width: 30%;
+  justify-content: space-between;
+}
+
+
+.links {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-left: auto;
+  order: 2;
+  align-items: center;
+}
+
+.explore-link a:hover {
+  background-color: grey;
+}
+
+.navbar-loggedin .logo {
+  padding-left: 40px;
+  margin-top: 5px;
 }
 
 .login-signup {
@@ -21,12 +56,14 @@
 }
 
 .login-signup li {
-
   margin: auto;
-
 }
 
 .navbar a {
+  text-decoration: none;
+}
+
+.navbar-loggedin a {
 
   text-decoration: none;
 }
@@ -51,20 +88,19 @@
 }
 
 .signupbutton {
-
-background-color: white;
-box-sizing: border-box;
-display: inline-block;
-padding: 8px 18px;
-vertical-align: top;
-font-family: inherit;
-font-weight: 600;
-font-size: 16px;
-text-align: center;
-border-radius: 3px;
-border: none;
-cursor: pointer;
-color: black;
+  background-color: white;
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 8px 18px;
+  vertical-align: top;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 16px;
+  text-align: center;
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+  color: black;
 }
 
 .signupbutton a:visited {
@@ -75,49 +111,6 @@ color: black;
   padding-right: 5px;
 }
 
-.loggedin .dropbtn {
-  display: flex;
-  font-size: 18px;
-  // padding: 10px;
-  padding-top: 20px;
-  // padding-bottom: 20px;
-  // padding-left: 20px;
-  // padding-right: 20px;
-  margin: auto;
-  border: none;
-  outline: none;
-  color: white;
-  background-color: inherit;
-  font-family: inherit;
-}
-
-.dropbtn:hover {
-  background-color: gray;
-}
-
-.dropdown-content {
-    // display: none;
-    top: 62px;
-    position: absolute;
-    background-color: black;
-    min-width: 100px;
-    // box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-.dropdown-content a {
-    float: none;
-    color: white;
-    padding: 12px 20px;
-    text-decoration: none;
-    display: block;
-    text-align: center;
-    cursor: pointer;
-}
-
-.loggedin:hover .dropdown-content {
-    display: block;
-}
 
 .explorelink a {
   color: white;
@@ -125,4 +118,37 @@ color: black;
 
 .explorelink a:visited {
   color: white;
+}
+
+.navbar-right {
+  width: 80%;
+  justify-content: space-between;
+
+}
+
+.greetinglogout {
+  padding-top: 5px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-left: auto;
+  order: 2;
+  align-items: center;
+  margin-bottom: 3px;
+}
+
+.dropdown-content {
+  background-color: white;
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 8px 18px;
+  vertical-align: top;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 16px;
+  text-align: center;
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+  color: black;
 }

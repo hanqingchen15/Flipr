@@ -50,6 +50,7 @@ class SessionForm extends React.Component {
 
   render() {
     return ( (this.props.formType === 'login') ? (
+      <body className="background">
       <div className="sessionform">
         <div className="login-box">
           <div className="logo"><Link to="/">flipr</Link></div>
@@ -69,7 +70,9 @@ class SessionForm extends React.Component {
           <Link to="/signup">Click Here!</Link>
         </div>
       </div>
+      </body>
     ) : (
+      <body className="background">
       <div className="sessionform">
         <div className="login-box">
           <div className="logo"><Link to="/">flipr</Link></div>
@@ -95,6 +98,7 @@ class SessionForm extends React.Component {
           <Link to="/login">Login here!</Link>
         </div>
       </div>
+      </body>
     )
   );
   }

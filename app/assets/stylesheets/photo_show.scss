@@ -1,0 +1,80 @@
+.picContainer img {
+  height: 550px;
+  width: auto;
+  padding: 20px 0 10px 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.picContainer {
+  background-color: #242424;
+  align-items: center;
+  height: 600px;
+}
+
+.backtoexplore {
+  margin-left: 20px;
+  position: relative;
+  top: 25px;
+  text-decoration: none;
+
+}
+
+.backtoexplore a {
+  color: white;
+}
+
+.backtoexplore:visited {
+  color: white;
+}
+
+.lowerContainer {
+  display: flex;
+  width: 80vw;
+  margin: 0 auto;
+}
+
+.infobox {
+  width: 40vw;
+  padding-top: 15px;
+  // margin: 0 auto;
+}
+
+.photoName {
+  font-size: 26px;
+  font-weight: bold;
+  padding-bottom: 15px;
+}
+
+.ownerName {
+  font-size: 15px;
+  font-style: italic;
+  padding-bottom: 15px;
+}
+
+.photoDescription {
+  font-size: 18px;
+}
+
+.photoDelete {
+  margin-left: 40px;
+  margin-top: 40px;
+  background-color: grey;
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 8px 18px;
+  vertical-align: top;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 16px;
+  text-align: center;
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+
+.photoDelete:hover {
+  background-color: darkgrey;
+}

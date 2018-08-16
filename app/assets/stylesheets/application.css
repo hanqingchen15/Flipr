@@ -15,13 +15,13 @@
  */
 
 body {
-  background: url("https://images.unsplash.com/photo-1501785888041-af3ef285b470?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=cea32ac97f8ffde3f76df4a646ac8b4d&auto=format&fit=crop&w=1950&q=80");
+  /* background: url("https://images.unsplash.com/photo-1501785888041-af3ef285b470?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=cea32ac97f8ffde3f76df4a646ac8b4d&auto=format&fit=crop&w=1950&q=80");
   width: 100%;
   height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
-  z-index: 2;
+  background-size: cover; */
+  /* z-index: 2; */
 
   font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
 }

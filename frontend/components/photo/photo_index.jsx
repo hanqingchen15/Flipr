@@ -17,10 +17,13 @@ class PhotoIndex extends React.Component {
     const {photos} = this.props;
     return (
       <div className="explorepage">
+        <div className="manyPhotos">
         <h1 className="banner">Explore</h1>
-        <ul>
-          {photos.map( (photo, idx) => <PhotoIndexItem key={idx} photo={photo} />)}
-        </ul>
+
+          <ul className="photoColumn">
+            {photos.map( (photo, idx) => <PhotoIndexItem key={idx} photo={photo} />)}
+          </ul>
+        </div>
       </div>
     );
   }

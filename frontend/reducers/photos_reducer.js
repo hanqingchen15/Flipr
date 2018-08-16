@@ -6,10 +6,10 @@ const photosReducer = (state = {}, action) => {
     case RECEIVE_ALL_PHOTOS:
       return merge({}, action.photos);
     case RECEIVE_PHOTO:
-      return merge({}, state, action.photo);
+      return merge({}, state, {[action.payload.photo.id]: action.payload.photo});
     case DELETE_PHOTO:
       let newState = merge({}, state);
-      delete newState[action.photo.id];
+      delete newState[action.payload.photo.id];
       return newState;
     default:
       return state;

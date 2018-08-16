@@ -10,14 +10,14 @@ export const receiveAllPhotos = (photos) => ({
   photos
 });
 
-export const receivePhoto = photo => ({
+export const receivePhoto = payload => ({
   type: RECEIVE_PHOTO,
-  photo
+  payload
 });
 
-export const deletePhoto = photo => ({
+export const deletePhoto = payload => ({
   type: DELETE_PHOTO,
-  photo
+  payload
 });
 
 export const receivePhotoErrors = errors => ({
@@ -31,7 +31,7 @@ export const requestAllPhotos = () => (dispatch) => (
 
 export const requestPhoto = (id) => (dispatch) => (
   PhotoAPIUtil.fetchPhoto(id).then(
-    photo => dispatch(receivePhoto(photo))
+    payload => dispatch(receivePhoto(payload))
   )
 );
 
@@ -43,18 +43,18 @@ export const requestUserPhotos = (ownerId) => (dispatch) => (
 
 export const createPhoto = (photo) => (dispatch) => (
   PhotoAPIUtil.createPhoto(photo).then(
-    photo => dispatch(receivePhoto(photo))
+    payload => dispatch(receivePhoto(payload))
   )
 );
 
 export const updatePhoto = (photo) => (dispatch) => (
   PhotoAPIUtil.updatePhoto(photo).then(
-    photo => dispatch(receivePhoto(photo))
+    payload => dispatch(receivePhoto(payload))
   )
 );
 
 export const removePhoto = (photoId) => (dispatch) => (
   PhotoAPIUtil.deletePhoto(photoId).then(
-    photo => dispatch(deletePhoto(photo))
+    payload => dispatch(deletePhoto(payload))
   )
 );

@@ -1,0 +1,78 @@
+.banner {
+  font-size: 26px;
+  padding: 25px 0 15px 10px;
+
+}
+.manyPhotos {
+  min-width: 800px;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 130px;
+  padding-right: 130px;
+  align-content: center;
+
+}
+
+.myPhotos {
+  min-width: 800px;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 130px;
+  padding-right: 130px;
+  align-content: center;
+
+}
+
+.photoItem {
+  position: relative;
+  text-align: center;
+
+
+}
+
+.phototext {
+  display: flex;
+  position: relative;
+  bottom: 50px;
+  left: 10px;
+  color: #fff;
+  visibility: hidden;
+  text-align: left;
+  flex-direction: column;
+  border: 3px solid white;
+  height: auto;
+}
+
+.photo-index-item:hover .phototext {
+  visibility: visible;
+
+}
+
+.photoColumn {
+  column-width: 300px;
+  column-count: 3;
+  line-height: 0;
+  column-gap: 5px;
+}
+
+.phototext .title {
+  font-size: 25px;
+}
+
+.phototext .description {
+
+}
+
+.photo-index-item {
+
+
+}
+
+.photoItem img {
+
+  width: 100%;
+  height: auto;
+  padding: 5px;
+}

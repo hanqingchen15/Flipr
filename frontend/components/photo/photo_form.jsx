@@ -1,5 +1,5 @@
 import React, { component } from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Link, withRouter } from 'react-router-dom';
 
 class PhotoForm extends React.Component {
   constructor(props) {
@@ -40,10 +40,9 @@ class PhotoForm extends React.Component {
     if (this.state.photoFile) {
       formData.append('photo[photo]', this.state.photoFile);
     }
-    this.props.createPhoto(formData).then(
+    this.props.submitPhoto(formData).then(
       () => {
         this.props.history.push('/myphotos');
-        location.reload();
       }
     );
   }

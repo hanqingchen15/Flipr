@@ -6,7 +6,8 @@ import PhotoForm from './photo_form';
 const msp = (state, ownProps) => {
   const photo = {
     name: "",
-    description: ""
+    description: "",
+    formType: 'create'
   };
   return {
     photo,
@@ -16,7 +17,7 @@ const msp = (state, ownProps) => {
 
 const mdp = (dispatch, ownProps) => {
   return {
-    createPhoto: (photo) => dispatch(createPhoto(photo))
+    submitPhoto: (photo) => dispatch(createPhoto(photo))
   }
 }
 

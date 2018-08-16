@@ -12,15 +12,21 @@ const Navbar = ({currentUser, logout}) => {
     </nav>
   );
   const loggedinLinks = () => (
-    <nav className="navbar">
-      <div className="logo"><Link to="/explore">flipr</Link></div>
-      <div className="explorelink"><Link to="/explore">Explore</Link></div>
-      <div className="explorelink"><Link to="/myphotos">My Photos</Link></div>
-      <div className="explorelink"><Link to="/create">Upload Photo</Link></div>
+    <nav className="navbar-loggedin">
+      <div className="navbar-left">
+        <ul className="links">
+          <li className="logo"><Link to="/explore">flipr</Link></li>
+          <li className="explorelink"><Link to="/explore">Explore</Link></li>
+          <li className="explorelink"><Link to="/myphotos">My Photos</Link></li>
+          <li className="explorelink"><Link to="/create">Upload Photo</Link></li>
+        </ul>
+      </div>
       <div className="loggedin">
-        <button className="dropbtn">Hello, {currentUser.fname}!</button>
-        <div className="dropdown-content">
-          <li><a onClick={logout}>Logout</a></li>
+        <div className="navbar-right">
+          <ul className="greetinglogout">
+            <li className="dropbtn">Hello, {currentUser.fname}!</li>
+            <li><a className="dropdown-content" onClick={logout}>Logout</a></li>
+          </ul>
         </div>
       </div>
     </nav>
