@@ -1,4 +1,13 @@
 class Photo < ApplicationRecord
+  validates :name, presence: true
+
+  validate :ensure_attachment
+
+  def ensure_attachment
+    unless self.photo.attached?
+      return errors[:photo] << "Must have a photo attached"
+    end
+  end
 
   has_one_attached :photo
 
