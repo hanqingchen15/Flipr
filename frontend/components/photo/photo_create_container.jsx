@@ -7,6 +7,7 @@ const msp = (state, ownProps) => {
   let photoId = ownProps.match.params.photoId || {};
   let photo = state.entities.photos[photoId] || {};
   return {
+    photo,
     formType: 'create',
     errors: state.errors.photos
   };

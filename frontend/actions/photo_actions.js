@@ -47,8 +47,8 @@ export const createPhoto = (photo) => (dispatch) => (
   )
 );
 
-export const updatePhoto = (photo) => (dispatch) => (
-  PhotoAPIUtil.updatePhoto(photo).then(
+export const updatePhoto = (photo, id) => (dispatch) => (
+  PhotoAPIUtil.updatePhoto(photo, id).then(
     payload => dispatch(receivePhoto(payload))
   )
 );

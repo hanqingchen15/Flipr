@@ -16,7 +16,7 @@ const msp = (state, ownProps) => {
 
 const mdp = (dispatch, ownProps) => {
   return {
-    submitPhoto: (photo) => dispatch(updatePhoto(photo))
+    submitPhoto: (photo, id) => dispatch(updatePhoto(photo, id))
   }
 }
 

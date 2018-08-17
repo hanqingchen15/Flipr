@@ -30,11 +30,13 @@ export const createPhoto = (photo) => (
   })
 );
 
-export const updatePhoto = (photo) => (
+export const updatePhoto = (photo, id) => (
   $.ajax({
     method: "PATCH",
-    url: `api/photos/${photo.id}`,
-    data: { photo }
+    url: `api/photos/${id}`,
+    data: photo,
+    contentType: false,
+    processData: false
   })
 );
 

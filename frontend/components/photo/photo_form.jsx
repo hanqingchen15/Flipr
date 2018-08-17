@@ -14,9 +14,11 @@ class PhotoForm extends React.Component {
   }
 
   update(field) {
-    return e => this.setState({
-      [field]: e.currentTarget.value
-    });
+    return e => {
+      let photo = this.state.photo;
+      photo[field] = e.currentTarget.value;
+      this.setState({photo})
+    };
   }
 
   handleFile(e) {
@@ -34,12 +36,12 @@ class PhotoForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const formData = new FormData();
-    formData.append('photo[name]', this.state.name)
-    formData.append('photo[description]', this.state.description)
+    formData.append('photo[name]', this.state.photo.name)
+    formData.append('photo[description]', this.state.photo.description)
     if (this.state.photoFile) {
       formData.append('photo[photo]', this.state.photoFile);
     }
-    this.props.submitPhoto(formData).then(
+    this.props.submitPhoto(formData, this.props.photoId).then(
       () => {
         this.props.history.push('/myphotos');
       }
