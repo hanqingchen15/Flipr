@@ -53,7 +53,7 @@ class PhotoForm extends React.Component {
 
         <div className='photouploaddiv'>
           <div className="uploadbanner">
-            <p className='banner'>Upload Photo</p>
+            <p className='uploadbannertext'>Upload Photo</p>
           </div>
           <div className="uploadContainer">
             <form onSubmit={this.handleSubmit}>
@@ -73,7 +73,7 @@ class PhotoForm extends React.Component {
       ) : (
         <div className='photouploaddiv'>
           <div className="uploadbanner">
-            <p className='banner'>Update Photo</p>
+            <p className='uploadbannertext'>Update Photo</p>
           </div>
           <div className="uploadContainer">
             <form onSubmit={this.handleSubmit}>
