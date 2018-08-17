@@ -3,7 +3,7 @@ Flipr
 
 [Flipr](https://flipr-app.herokuapp.com/), a web application similar to Flickr, allows users to upload and share photos with others. Users would also be able to explore the photos uploaded by others, collect these into their own album, and comment on each others' submissions.
 
-![HomePage](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+![HomePage](https://raw.githubusercontent.com/hanqingchen15/Flipr/master/docs/readme/images/Homepage.png "Logo Title Text 1")
 
 Features
 ----
@@ -79,7 +79,7 @@ export const ProtectedRoute = withRouter(connect(mapStateToProps, null)(Protecte
 
 ##### Explore #####
 
-![Explore](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+![Explore](https://raw.githubusercontent.com/hanqingchen15/Flipr/master/docs/readme/images/Explore%20Page.png "Logo Title Text 1")
 
 Users are able to view all the photos uploaded to flipr on this page., which is rendered using the `column` CSS properties. The page will dynamically adjust the number of columns and image sizes to ensure a uniform grid representation regardless of the user's display window size.
 
