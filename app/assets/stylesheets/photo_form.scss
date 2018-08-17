@@ -2,6 +2,11 @@
   background: #242424;
   height: 100vh;
   color: black;
+  min-width: 680px;
+}
+
+textarea {
+  resize: none;
 }
 
 .uploadbanner {
