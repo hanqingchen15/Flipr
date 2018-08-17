@@ -49,39 +49,46 @@ class PhotoForm extends React.Component {
   }
 
   render() {
-    console.log(this.props.formType)
     return ( (this.props.formType === 'create') ? (
 
         <div className='photouploaddiv'>
-          <h1 className='banner'>Upload Photo</h1>
-          <form onSubmit={this.handleSubmit}>
-            <label>Name:
-              <input type='text' onChange={this.update('name')} />
-            </label>
-            <label>Description:
-              <input type='textarea' onChange={this.update('description')} />
-            </label>
-            <label>Upload Photo:
-              <input type='file' onChange={this.handleFile} />
-            </label>
-            <button type="submit">Create Photo</button>
-          </form>
+          <div className="uploadbanner">
+            <p className='banner'>Upload Photo</p>
+          </div>
+          <div className="uploadContainer">
+            <form onSubmit={this.handleSubmit}>
+              <label>Name:
+                <input type='text' onChange={this.update('name')} />
+              </label>
+              <label>Description:
+                <textarea rows="10" cols="30" onChange={this.update('description')} />
+              </label>
+              <label className="uploadlabel">Upload Photo:
+                <input type='file' onChange={this.handleFile} />
+              </label>
+              <button className="uploadfield" type="submit">Create Photo</button>
+            </form>
+          </div>
         </div>
       ) : (
         <div className='photouploaddiv'>
-          <h1 className='banner'>Update Photo</h1>
-          <form onSubmit={this.handleSubmit}>
-            <label>Name:
-              <input type='text' value={this.props.photo.name} onChange={this.update('name')} />
-            </label>
-            <label>Description:
-              <input type='textarea' value={this.props.photo.description} onChange={this.update('description')} />
-            </label>
-            <label>Upload Photo:
-              <input type='file' onChange={this.handleFile} />
-            </label>
-            <button type="submit">Update Photo</button>
-          </form>
+          <div className="uploadbanner">
+            <p className='banner'>Update Photo</p>
+          </div>
+          <div className="uploadContainer">
+            <form onSubmit={this.handleSubmit}>
+              <label>Name:
+                <input type='text' value={this.props.photo.name} onChange={this.update('name')} />
+              </label>
+              <label>Description:
+                <textarea rows="10" cols="30" value={this.props.photo.description} onChange={this.update('description')} />
+              </label>
+              <label>Upload Photo:
+                <input className="uploadfield" type='file' onChange={this.handleFile} />
+              </label>
+              <button type="submit">Update Photo</button>
+            </form>
+          </div>
         </div>
       )
     );

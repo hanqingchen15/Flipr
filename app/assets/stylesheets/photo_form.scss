@@ -1,0 +1,67 @@
+.photouploaddiv {
+  background: #242424;
+  height: 100vh;
+  color: black;
+}
+
+.uploadbanner {
+  // border: 3px blue solid;
+  width: 100vw;
+  background-color: white;
+  height: 33px;
+}
+
+.banner {
+  position: absolute;
+  top: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.uploadContainer {
+  background:rgba(255,255,255, 0.9);
+  padding: 10px;
+  width: 450px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 100px;
+  font-size: 18px;
+}
+
+.uploadContainer input {
+  width: 100%;
+  font-size: 18px;
+  background-color: #E3E3E3;
+  border: none;
+  text-align: left;
+  padding-bottom: 6px;
+  padding-top: 6px;
+}
+
+.uploadContainer textarea {
+  width: 100%;
+  font-size: 18px;
+  background-color: #E3E3E3;
+  border: none;
+  text-align: left;
+  padding-bottom: 6px;
+  padding-top: 6px;
+}
+
+.uploadlabel {
+  // border: 3px solid blue;
+}
+
+.uploadContainer button {
+  cursor: pointer;
+  margin: 7px;
+  width: 40%;
+  font-size: 20px;
+  color: black;
+  background-color: #D3D3D3;
+  border-radius: 35px;
+  padding: 5px;
+}
