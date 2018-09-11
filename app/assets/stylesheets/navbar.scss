@@ -71,6 +71,7 @@
 
 .loginlink {
   padding-right: 22px;
+  color: white;
 }
 
 .loginlink a:visited {
@@ -90,7 +91,7 @@
 }
 
 .signupbutton {
-  background-color: white;
+  background-color: #EDEDED;
   box-sizing: border-box;
   display: inline-block;
   padding: 8px 18px;
@@ -108,6 +109,11 @@
 
 .signupbutton a:visited {
   color: black;
+}
+
+.signupbutton:hover {
+  color: #2F2F2F;
+  background: white;
 }
 
 .shift {
@@ -141,7 +147,7 @@
 }
 
 .dropdown-content {
-  background-color: white;
+  background-color: #EDEDED;
   box-sizing: border-box;
   display: inline-block;
   padding: 8px 18px;
@@ -154,4 +160,13 @@
   border: none;
   cursor: pointer;
   color: black;
+}
+
+.dropdown-content:hover {
+  color: #2F2F2F;
+  background: white;
+}
+
+.dropbtn {
+  margin-right: 6px;
 }
