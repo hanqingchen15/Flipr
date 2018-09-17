@@ -11,6 +11,11 @@ class PhotoForm extends React.Component {
     }
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleFile = this.handleFile.bind(this);
+    this.goBack = this.goBack.bind(this);
+  }
+
+  goBack() {
+    this.props.history.goBack();
   }
 
   update(field) {
@@ -67,7 +72,10 @@ class PhotoForm extends React.Component {
                 <input type='file' onChange={this.handleFile} />
               </label>
               <button className="uploadfield" type="submit">Create Photo</button>
+
             </form>
+            <div><button onClick={this.goBack}>Cancel</button></div>
+
           </div>
         </div>
       ) : (
@@ -83,11 +91,14 @@ class PhotoForm extends React.Component {
               <label>Description:
                 <textarea rows="10" cols="30" value={this.props.photo.description} onChange={this.update('description')} />
               </label>
-              <label>Upload Photo:
-                <input className="uploadfield" type='file' onChange={this.handleFile} />
+              <label className="uploadlabel">Upload Photo:
+                <input type='file' onChange={this.handleFile} />
               </label>
-              <button type="submit">Update Photo</button>
+              <button className="uploadfield" type="submit">Update Photo</button>
+
             </form>
+            <div><button onClick={this.goBack}>Cancel</button></div>
+
           </div>
         </div>
       )
