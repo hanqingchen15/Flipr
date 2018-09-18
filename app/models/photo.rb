@@ -1,5 +1,5 @@
 class Photo < ApplicationRecord
-  validates :name, presence: true
+  validates :name, presence: true, uniqueness: true
 
   validate :ensure_attachment
 
