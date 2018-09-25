@@ -12,9 +12,7 @@ class PhotoShow extends React.Component {
     this.deleteButton = this.deleteButton.bind(this);
     this.handleEdit = this.handleEdit.bind(this);
     this.editButton = this.editButton.bind(this);
-
-    // this.openModal = this.openModal.bind(this);
-    // this.closeModal = this.closeModal.bind(this);
+    this.goBack = this.goBack.bind(this);
   }
 
   componentDidMount() {
@@ -29,14 +27,6 @@ class PhotoShow extends React.Component {
       { photo: newProps.photo }
     );
   }
-
-  // openModal() {
-  //   this.setState({modalOpen: true});
-  // }
-  //
-  // closeModal() {
-  //   this.setState({modalOpen: false});
-  // }
 
   handleSubmit(e) {
     e.preventDefault();
@@ -81,13 +71,19 @@ class PhotoShow extends React.Component {
     }
   }
 
+  goBack(e) {
+    e.preventDefault();
+    console.log("clicked")
+    this.props.history.goBack();
+  }
+
   render() {
     const { photo, owner, currentUser } = this.props;
     if (!photo || !owner) return null;
     return (
       <div className="upperContainer">
         <div className="picContainer">
-          <Link className="backtoexplore" to="/explore">Back to explore</Link>
+          <a className="backtoexplore" onClick={this.goBack}>Back to Previous</a>
           <img src={`${photo.photoUrl}`} />
         </div>
         <div className="lowerContainer">

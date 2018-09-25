@@ -19,12 +19,13 @@
   position: relative;
   top: 25px;
   text-decoration: none;
-
-}
-
-.backtoexplore {
+  cursor: pointer;
   color: white;
 }
+
+// .backtoexplore:hover {
+//   cursor: pointer;
+// }
 
 .backtoexplore:visited {
   color: white;
