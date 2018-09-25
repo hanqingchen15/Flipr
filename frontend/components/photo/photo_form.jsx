@@ -14,7 +14,8 @@ class PhotoForm extends React.Component {
     this.goBack = this.goBack.bind(this);
   }
 
-  goBack() {
+  goBack(e) {
+    e.preventDefault();
     this.props.history.goBack();
   }
 
@@ -72,9 +73,9 @@ class PhotoForm extends React.Component {
                 <input type='file' onChange={this.handleFile} />
               </label>
               <button className="uploadfield" type="submit">Create Photo</button>
+              <button onClick={this.goBack}>Cancel</button>
 
             </form>
-            <div><button onClick={this.goBack}>Cancel</button></div>
 
           </div>
         </div>
@@ -95,9 +96,9 @@ class PhotoForm extends React.Component {
                 <input type='file' onChange={this.handleFile} />
               </label>
               <button className="uploadfield" type="submit">Update Photo</button>
+              <button onClick={this.goBack}>Cancel</button>
 
             </form>
-            <div><button onClick={this.goBack}>Cancel</button></div>
 
           </div>
         </div>
