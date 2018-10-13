@@ -33,22 +33,23 @@
 }
 
 .phototext {
-  // display: flex;
-  // position: relative;
-  // bottom: 50px;
-  // left: 10px;
-  // color: #fff;
   visibility: hidden;
-  // text-align: left;
-  // flex-direction: column;
-  // border: 3px solid white;
-  // height: auto;
 }
 
-// .photo-index-item:hover .phototext {
-//   visibility: visible;
-//
-// }
+.phototext {
+  // display: flex;
+  position: absolute;
+  bottom: 50px;
+  left: 10px;
+  color: #fff;
+  visibility: hidden;
+  text-align: left;
+
+}
+
+.photo-index-item:hover .phototext {
+  visibility: visible;
+}
 
 .photoColumn {
   column-width: 300px;
@@ -62,11 +63,12 @@
 }
 
 .phototext .description {
+  font-size: 12px;
 
 }
 
 .photo-index-item {
-
+  position: relative;
 
 }
 
